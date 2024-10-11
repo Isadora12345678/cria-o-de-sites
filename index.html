@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama Cliente-Servidor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .diagram-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 700px;
+            position: relative;
+        }
+
+        .client, .server {
+            width: 200px;
+            padding: 20px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .client h2, .server h2 {
+            color: #007BFF;
+        }
+
+        .arrow {
+            position: absolute;
+            width: 120px;
+            height: 2px;
+            background-color: #007BFF;
+        }
+
+        .arrow::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            border-top: 10px solid transparent;
+            border-left: 10px solid #007BFF;
+            border-bottom: 10px solid transparent;
+        }
+
+        .request {
+            top: 40%;
+            left: 225px;
+        }
+
+        .response {
+            top: 60%;
+            left: 355px;
+            transform: rotate(180deg);
+        }
+
+        .label {
+            position: absolute;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .request-label {
+            top: 35%;
+            left: 285px;
+        }
+
+        .response-label {
+            top: 65%;
+            left: 285px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="diagram-container">
+        <div class="client">
+            <h2>Cliente</h2>
+            <p>Navegador</p>
+        </div>
+
+        <div class="arrow request"></div>
+        <div class="label request-label">Requisição HTTP</div>
+
+        <div class="arrow response"></div>
+        <div class="label response-label">Resposta HTTP</div>
+
+        <div class="server">
+            <h2>Servidor</h2>
+            <p>Servidor Web</p>
+        </div>
+    </div>
+
+</body>
+</html>
